@@ -9,11 +9,9 @@
 <link rel="stylesheet" type="text/css" href="resources/mycss.css" />
 
 
-
-
 <div class="row">
 	<div class="col-lg-12 d-flex justify-content-center">
-		<h1 class="page-header" style="color:#00498c">Board Register</h1>
+		<h1 class="page-header" style="color:#00498c">Board Read</h1>
 	</div>
 </div>
 
@@ -24,21 +22,24 @@
 		<div class="panel panel-default">
 		<!-- <div class="panel-heading">Board Register</div> -->
 		<div class="panel-body">
-			<form action="/board/register" method="post">
 				<div class="form-group">
-				<label style="color:tomato">Title</label> <input class="form-control" name="title" >
+				<label style="color:tomato">bno</label> <input class="form-control" name="bno" value="${board.bno}" readonly="readonly">
 				</div>
 				<div class="form-group">
-				<label style="color:tomato">Text area</label> <textarea class="form-control" rows="5" name="content"></textarea>
+				<label style="color:tomato">Title</label> <input class="form-control" name="title" value="${board.title}" readonly="readonly">
 				</div>
 				<div class="form-group">
-				<label style="color:tomato">Writer</label> <input class="form-control" name="writer">
+				<label style="color:tomato">Text area</label> <textarea class="form-control" rows="5" name="content" readonly="readonly">${board.content}</textarea>
+				</div>
+				<div class="form-group">
+				<label style="color:tomato">Writer</label> <input class="form-control" name="writer" value="${board.writer}" readonly="readonly">
 				</div>
 				<div style="text-align:center;">
-				<button type="submit" class="btn btn-primary">Submit Button</button>
-				<button type="reset" class="btn btn-danger">Reset Button</button>
+				<button data-oper='modify' class="btn btn-primary"
+					onclick="location.href='/board/modify?bno=${board.bno}'">Modify</button>
+				<button data-oper='list' class="btn btn-info"
+					onclick="location.href='/board/list'">List</button>
 				</div>
-			</form>
 		</div>
 		</div>
 	</div>

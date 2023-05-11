@@ -1,5 +1,6 @@
 package com.mystudy.spring;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,12 +47,13 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	@GetMapping("/get")
+	@GetMapping({"/get", "/modify"})
 	public void get(@RequestParam("bno") Long bno, Model model) {
 		
-		log.info("/get");
+		log.info("/get of modify");
 		model.addAttribute("board", service.get(bno));
 	}
+	
 	
 	@PostMapping("/modify")
 	public String modify(BoardVO boardVO, RedirectAttributes rttr) {
