@@ -36,14 +36,37 @@
 				</div>
 				<div style="text-align:center;">
 				<button data-oper='modify' class="btn btn-primary"
-					onclick="location.href='/board/modify?bno=${board.bno}'">Modify</button>
+<%-- onclick="location.href='/board/modify?bno=${board.bno}'" --%>>Modify</button>
 				<button data-oper='list' class="btn btn-info"
-					onclick="location.href='/board/list'">List</button>
+<%-- onclick="location.href='/board/list'" --%>>List</button>
 				</div>
+				
+				<form id='operForm' action="/board/modify" method="get">
+					<input type='hidden' id='bno' name='bno' value="${board.bno}">
+				</form>
 		</div>
 		</div>
 	</div>
 </div>
+
+<script>
+$(document).ready(function(){
+	
+	var oper = $("#operForm");
+	
+	$("button[data-oper='modify']").on("click", function(e){
+		oper.attr("action", "/board/modify").submit();
+	});
+	
+	$("button[data-oper='list']").on("click", function(e){
+		oper.find("#bno").remove();
+		oper.attr("action", "/board/list");
+		oper.submit();
+	});
+	
+});
+
+</script>
 
 
 <%@include file="../includes/footer.jsp" %>

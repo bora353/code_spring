@@ -71,8 +71,6 @@ $(document).ready(function(){
 	
 	var form = $("#myform");
 	
-	console.log(form);
-	
 	$('button').on("click", function(e){
 		
 		e.preventDefault();  //submit 처리되는것 막아
@@ -84,8 +82,10 @@ $(document).ready(function(){
 		if(operation === 'remove'){
 			form.attr("action", "/board/remove");
 		} else if(operation === 'list'){
-			self.location = "/board/list";
-			return;
+			form.attr("action", "/board/list").attr("method","get");
+			form.empty();
+			//self.location = "/board/list";
+			//return;
 		}
 		form.submit();
 		

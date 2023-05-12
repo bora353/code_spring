@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import com.mystudy.domain.BoardVO;
+import com.mystudy.domain.Criteria;
 
 public interface BoardMapper {
 
@@ -19,5 +20,10 @@ public interface BoardMapper {
 	public int delete(Long bno);
 	
 	public int update(BoardVO boardVO);
+	
+	
+	
+	
+	public List<BoardVO> getListWithPaging(Criteria cri);
 	
 }
