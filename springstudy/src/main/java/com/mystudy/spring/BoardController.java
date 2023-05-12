@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.mystudy.domain.BoardVO;
+import com.mystudy.domain.Criteria;
+import com.mystudy.domain.PageDTO;
 import com.mystudy.service.BoardService;
 
 import lombok.AllArgsConstructor;
@@ -24,10 +26,13 @@ public class BoardController {
 	private BoardService service;
 	
 	@GetMapping("/list")
-	public void list(Model model) {
+	public void list(Model model, Criteria cri) {
+		//log.info("list");
+		//model.addAttribute("list", service.getList());
 		
-		log.info("list");
-		model.addAttribute("list", service.getList());
+		log.info("list : " + cri);
+		model.addAttribute("list", service.getList(cri));
+		model.addAttribute("pageMaker", new PageDTO(cri, 123));
 	}
 	
 	@GetMapping("/register")

@@ -13,7 +13,7 @@ public class Criteria {
 	private int amount;
 	
 	public Criteria() {
-		this(1, 10);
+		this(1, 10);		// 기본이 1page에  10개
 	}
 	
 	public Criteria(int pageNum, int amount) {
