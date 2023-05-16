@@ -38,7 +38,7 @@
                                         <tr>
                                             <td>${board.bno}</td>
                                             <td>
-                                            <a class='move' href='/board/get?bno=${board.bno}'>
+                                            <a class='move' href='${board.bno}'>
                                             ${board.title}
                                             </a>
                                             </td>
@@ -163,7 +163,7 @@ $(document).ready(function(){
 	$(".move").on("click", function(e){
 		
 		e.preventDefault();
-		actionForm.append("<input type='hidden' name='bno' value=' "+$(this).attr("href")+"  '>")
+		actionForm.append("<input type='hidden' name='bno' value='"+$(this).attr("href")+"'>")
 		actionForm.attr("action", "/board/get");
 		actionForm.submit();
 	});

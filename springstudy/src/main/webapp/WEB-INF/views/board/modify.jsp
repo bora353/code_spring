@@ -53,6 +53,12 @@
 				readonly="readonly">
 				</div>
 				
+				<!-- 페이징처리  -->
+				<input type='hidden' name='pageNum' value='${cri.pageNum}'>
+				<input type='hidden' name='amount' value='${cri.amount}'>
+				
+				
+				
 				<div style="text-align:center;">
 				<button type="submit" data-oper='modify' class="btn btn-primary">Modify</button>
 				<button type="submit" data-oper='remove' class="btn btn-danger">Remove</button>
@@ -83,7 +89,12 @@ $(document).ready(function(){
 			form.attr("action", "/board/remove");
 		} else if(operation === 'list'){
 			form.attr("action", "/board/list").attr("method","get");
+			var pageNumTag = $("input[name='pageNum']").clone();
+			var amountTag = $("input[name='amount']").clone();
+			
 			form.empty();
+			form.append(pageNumTag);
+			form.append(amountTag);
 			//self.location = "/board/list";
 			//return;
 		}

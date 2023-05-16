@@ -23,16 +23,20 @@
 		<!-- <div class="panel-heading">Board Register</div> -->
 		<div class="panel-body">
 				<div class="form-group">
-				<label style="color:tomato">bno</label> <input class="form-control" name="bno" value="${board.bno}" readonly="readonly">
+				<label style="color:tomato">bno</label> 
+				<input class="form-control" name="bno" value="${board.bno}" readonly="readonly">
 				</div>
 				<div class="form-group">
-				<label style="color:tomato">Title</label> <input class="form-control" name="title" value="${board.title}" readonly="readonly">
+				<label style="color:tomato">Title</label> 
+				<input class="form-control" name="title" value="${board.title}" readonly="readonly">
 				</div>
 				<div class="form-group">
-				<label style="color:tomato">Text area</label> <textarea class="form-control" rows="5" name="content" readonly="readonly">${board.content}</textarea>
+				<label style="color:tomato">Text area</label> 
+				<textarea class="form-control" rows="5" name="content" readonly="readonly">${board.content}</textarea>
 				</div>
 				<div class="form-group">
-				<label style="color:tomato">Writer</label> <input class="form-control" name="writer" value="${board.writer}" readonly="readonly">
+				<label style="color:tomato">Writer</label> 
+				<input class="form-control" name="writer" value="${board.writer}" readonly="readonly">
 				</div>
 				<div style="text-align:center;">
 				<button data-oper='modify' class="btn btn-primary"
@@ -43,6 +47,8 @@
 				
 				<form id='operForm' action="/board/modify" method="get">
 					<input type='hidden' id='bno' name='bno' value="${board.bno}">
+					<input type='hidden' name='pageNum' value="${cri.pageNum}">
+					<input type='hidden' name='amount' value="${cri.amount}">
 				</form>
 		</div>
 		</div>

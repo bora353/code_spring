@@ -1,21 +1,13 @@
 package com.mystudy.spring;
 
-
-
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
-
+/*
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.IntFunction;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import javax.sound.sampled.LineListener;
 
-import org.apache.taglibs.standard.lang.jstl.test.beans.PublicInterface2;
-import org.springframework.context.annotation.EnableLoadTimeWeaving;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -101,3 +93,4 @@ public class SampleController {
 	
 	
 }
+*/
