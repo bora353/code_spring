@@ -142,7 +142,7 @@ $(document).ready(function(){
 	
 	
 	// get 
-	replyService.get(10, function(data)){
+	replyService.get(10, function(data){
 		console.log(data);
 	});
  	
