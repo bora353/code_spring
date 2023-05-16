@@ -53,9 +53,15 @@
 				readonly="readonly">
 				</div>
 				
-				<!-- 페이징처리  -->
-				<input type='hidden' name='pageNum' value='${cri.pageNum}'>
-				<input type='hidden' name='amount' value='${cri.amount}'>
+				
+				
+			<!-- 페이징처리, 검색처리  -->
+					<input type='hidden' name='pageNum' value='${cri.pageNum}'>
+					<input type='hidden' name='amount' value='${cri.amount}'>
+					
+					<input type='hidden' name='type' value='${cri.type}'>
+					<input type='hidden' name='keyword' value='${cri.keyword}'>
+			<!--  -->					
 				
 				
 				
@@ -65,6 +71,11 @@
 				<button type="submit" data-oper='list' class="btn btn-info">List</button>
 				</div>
 			</form>
+			
+			
+			
+				
+				
 		</div>
 		</div>
 	</div>
@@ -91,16 +102,23 @@ $(document).ready(function(){
 			form.attr("action", "/board/list").attr("method","get");
 			var pageNumTag = $("input[name='pageNum']").clone();
 			var amountTag = $("input[name='amount']").clone();
+			var keywordTag = $("input[name='keyword']").clone();
+			var typeTag = $("input[name='type']").clone();
 			
 			form.empty();
 			form.append(pageNumTag);
 			form.append(amountTag);
+			form.append(keywordTag);
+			form.append(typeTag);
 			//self.location = "/board/list";
 			//return;
 		}
 		form.submit();
 		
 	});
+	
+	
+	
 	
 });
 
