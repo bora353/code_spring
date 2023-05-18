@@ -23,6 +23,8 @@
 
     <!-- Custom styles for this page -->
     <link href="/resources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
