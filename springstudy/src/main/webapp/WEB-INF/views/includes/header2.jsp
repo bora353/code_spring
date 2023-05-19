@@ -27,6 +27,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+<!-- Custom scripts for all pages-->
+<script src="/resources/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/resources/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="/resources/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 </head>
 
 <body id="page-top">

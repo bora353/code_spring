@@ -31,6 +31,9 @@ var replyService = (function() {
 	    
 	    $.getJSON("/replies/pages/" + bno + "/" + page + ".json",
 	        function(data) {
+	        
+	        console.log("replyService getList...")
+			console.log(data)
 	    	
 	          if (callback) {
 	            //callback(data); // 댓글 목록만 가져오는 경우 
